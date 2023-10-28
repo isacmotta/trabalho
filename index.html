@@ -1,9 +1,76 @@
-#locall sem permição pelo loguin
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <title>Localizador</title>
+  <title>Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #ffffff;
+    }
+
+    .container {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .form-control {
+      background-color: #ffffff;
+      border-color: #d0d0d0;
+      color: #333333;
+    }
+
+    .btn {
+      background-color: #00aced;
+      border-color: #00aced;
+      color: #ffffff;
+    }
+
+    .card {
+      border-radius: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-control::placeholder {
+      color: #999999;
+    }
+
+    .btn {
+      border-radius: 0;
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Login</h2>
+        <form action="/login" method="post">
+          <div class="form-group">
+            <label for="username">Usuário</label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Usuário">
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+          </div>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     // Obtém as informações do dispositivo
